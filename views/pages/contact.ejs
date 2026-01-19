@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Lead Generation | Outsourced Accounting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b3d4f",
+                        "accent-emerald": "#1ABC9C",
+                        "background-light": "#f9fafa",
+                        "background-dark": "#f9fafa",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .form-input:focus { border-color: #2b3d4f !important; ring: 0 !important; outline: none !important; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary min-h-screen">
+<%- include('../partials/header') %>
+<main class="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<!-- Left Column: Trust & Info -->
+<div class="flex flex-col gap-10">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1.5 rounded-full bg-accent-emerald/10 text-accent-emerald text-xs font-bold uppercase tracking-wider">Growth Ready</span>
+<h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-primary">
+                        Expert Accounting, <br/>
+<span class="text-accent-emerald">Engineered</span> for Growth.
+                    </h1>
+<p class="text-lg text-primary/70 leading-relaxed max-w-xl">
+                        Stop drowning in spreadsheets. Speak with a senior partner today and discover how our outsourced solutions streamline your global operations.
+                    </p>
+</div>
+<!-- Contact Details Card -->
+<div class="flex flex-col gap-6 p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Global Headquarters</h4>
+<p class="text-primary/60">1200 Financial District, Suite 400<br/>San Francisco, CA 94104</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Direct Line</h4>
+<p class="text-primary/60">+1 (800) 555-FINANCE</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Partner Support</h4>
+<p class="text-primary/60">growth@finscale-accounting.com</p>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex flex-wrap items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2 font-bold text-sm">
+<span class="material-symbols-outlined text-primary">verified</span> ISO 27001
+                    </div>
+<div class="flex items-center gap-2 font-bold text-sm">
+<span class="material-symbols-outlined text-primary">stars</span> TOP RATED
+                    </div>
+<div class="flex items-center gap-2 font-bold text-sm">
+<span class="material-symbols-outlined text-primary">security</span> AICPA SECURE
+                    </div>
+</div>
+</div>
+<!-- Right Column: Lead Form Card -->
+<div class="relative">
+<!-- Decorative Element -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-accent-emerald/5 rounded-full blur-3xl"></div>
+<div class="relative bg-white rounded-3xl p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-gray-100">
+<div class="mb-8">
+<h3 class="text-2xl font-extrabold mb-2">Schedule Free Consultation</h3>
+<p class="text-primary/60">Fill out the form below and our strategy team will reach out within 4 business hours.</p>
+</div>
+<form action="/contact" method="POST" class="space-y-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Full Name</label>
+<input name="fullName" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all" placeholder="Jane Cooper" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Business Email</label>
+<input name="email" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all" placeholder="jane@company.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Phone Number</label>
+<input name="phone" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Company Name</label>
+<input name="company" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all" placeholder="Acme Logistics" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Country</label>
+<select name="country" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all appearance-none">
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>Australia</option>
+<option>Singapore</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Service Interest</label>
+<select name="service" class="w-full h-14 px-5 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all appearance-none">
+<option>Full-Cycle Accounting</option>
+<option>Fractional CFO</option>
+<option>Payroll Management</option>
+<option>Tax Strategy &amp; Prep</option>
+<option>Audit Support</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary px-1">Tell us about your challenges</label>
+<textarea name="challenges" class="w-full px-5 py-4 rounded-xl border border-gray-200 bg-background-light focus:ring-2 focus:ring-accent-emerald/20 transition-all resize-none" placeholder="How can we help you scale today?" rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full h-16 bg-accent-emerald hover:bg-[#16a085] text-white font-extrabold text-lg rounded-xl shadow-lg shadow-accent-emerald/20 transition-all flex items-center justify-center gap-3" type="submit">
+                                Schedule Free Consultation
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 mt-4 text-xs text-primary/50 font-medium">
+<span class="material-symbols-outlined text-sm">lock</span>
+                                No spam. Your data is encrypted and secure.
+                            </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Map Section -->
+<section class="mt-12 w-full h-[400px] relative overflow-hidden bg-gray-100 border-t border-gray-200">
+<div class="absolute inset-0 grayscale opacity-70 hover:opacity-100 transition-opacity duration-700" data-alt="Grayscale map showing San Francisco financial district" data-location="San Francisco" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLU_FvK2PzEmTrXs2e7tTKrp9Zy7NzIoB5B5Hx0UY6Acacy7TfbQJrPYUWiQ7uZivWxxfGj2zwTHHNa9YhLtum5AdnumHZ9SOqT0kEWPd7vExNdXETiY_Mub9AuPKdJ0JpsV17ePiVQEypV1BozCfVoRPNQZshGpUxg1RGQZUNAiK-ainTIcVQaLtrjJA5qFXMUNSj16wf_ri6AOIPfxBMOiDJ0TBX0dpXL37NlMcUhXgMYLAmYcGmgjCF1-K4GDq4ZMtUu8NwzGbA'); background-size: cover; background-position: center;">
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-background-light to-transparent h-20"></div>
+<div class="absolute bottom-8 left-8 lg:left-24 glass-card p-6 rounded-2xl shadow-xl border border-white/50 max-w-sm">
+<h5 class="text-primary font-bold text-sm mb-1 uppercase tracking-widest">Office Location</h5>
+<p class="text-primary text-sm font-medium">1200 Financial District, San Francisco, CA</p>
+<a class="text-accent-emerald text-xs font-bold mt-3 inline-flex items-center gap-1 hover:underline" href="#">
+                Open in Google Maps <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</section>
+<%- include('../partials/footer') %>
+</body></html>
